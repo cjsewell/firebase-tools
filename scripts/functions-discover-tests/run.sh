@@ -5,6 +5,9 @@ IFS=$'\n\t'
 # Globally link the CLI for the testing framework
 ./scripts/npm-link.sh
 
+# Install yarn
+npm i -g yarn
+
 for dir in ./scripts/functions-discover-tests/fixtures/*; do
   (cd $dir && ./install.sh)
 done
